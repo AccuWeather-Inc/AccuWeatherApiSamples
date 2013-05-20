@@ -60,7 +60,7 @@
             var awxCityLookUpFound = function (data) {
                 var msg, locationKey = null;
 
-                $("#awxLocationUrl").html("<a href=" + locationUrl + ">" + locationUrl + "</a>");
+                $("#awxLocationUrl").html("<a href=" + encodeURI(locationUrl) + ">" + locationUrl + "</a>");
                 if (data.length == 1) {
                     locationKey = data[0].Key;
                     msg = "One location found: <b>" + data[0].LocalizedName + "</b>. Key: " + locationKey;
